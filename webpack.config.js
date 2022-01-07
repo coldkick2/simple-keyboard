@@ -30,9 +30,10 @@ module.exports = {
   target: 'es5',
   output: {
     filename: 'index.js',
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'build/cjs'),
     library: "SimpleKeyboard",
     libraryTarget: 'umd',
+    chunkFormat: 'array-push',
     clean: true,
     globalObject: 'this',
     environment: {

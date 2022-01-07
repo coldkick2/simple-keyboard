@@ -32,12 +32,12 @@ module.exports = {
   mode: "production",
   entry: './src/lib/index.modern.ts',
   target: 'es5',
-  devtool: 'source-map',
   output: {
     filename: 'index.modern.js',
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'build/cjs'),
     library: "SimpleKeyboard",
     libraryTarget: 'umd',
+    chunkFormat: 'array-push',
     globalObject: 'this'
   },
   optimization: {
